@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_anime">
+
+    <fragment
+        android:id="@+id/nav_anime"
+        android:name="com.example.animeg6.ui.anime.AnimeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_anime" />
+
+    <fragment
+        android:id="@+id/nav_favoritos"
+        android:name="com.example.animeg6.ui.favorito.FavoritoFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_favorito" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.animeg6.ui.perfil.PerfilFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_perfil" />
+</navigation>

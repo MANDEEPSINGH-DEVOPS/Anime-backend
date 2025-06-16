@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_principal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightOragne"
+    android:backgroundTint="@color/lightOragne">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageViewBackground"
+                android:layout_width="350dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/imageViewForeground"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="-32dp"
+                android:elevation="10dp"
+                app:circularflow_defaultRadius="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewBackground"
+                app:layout_constraintStart_toStartOf="@+id/imageViewBackground"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewBackground"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/textViewTipus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewForeground"
+                app:layout_constraintStart_toStartOf="@+id/imageViewBackground"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewBackground" />
+
+            <ImageView
+                android:id="@+id/imageViewNotFavorito"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewForeground"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewBackground"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewBackground"
+                app:srcCompat="@drawable/ic_baseline_favorite_border_24"
+                app:tint="@color/orange" />
+
+            <ImageView
+                android:id="@+id/imageViewFavorito"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewForeground"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewBackground"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewBackground"
+                app:srcCompat="@drawable/ic_baseline_favorite_24"
+                app:tint="@color/orange" />
+
+            <TextView
+                android:id="@+id/textViewTituloAnime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Titulo Anime"
+                android:textColor="@color/orange"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textViewTipus"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewForeground" />
+
+            <TextView
+                android:id="@+id/textViewNombreOriginal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Nombre original: "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewTituloAnime"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTituloAnime" />
+
+            <TextView
+                android:id="@+id/textViewDemografia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/grey"
+                android:paddingLeft="16dp"
+                android:paddingTop="4dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="4dp"
+                android:text="TextView"
+                android:textColor="@color/white"
+                app:circularflow_radiusInDP="15dp"
+                app:layout_constraintStart_toStartOf="@+id/textViewNombreOriginal"
+                app:layout_constraintTop_toBottomOf="@+id/textViewNombreOriginal" />
+
+            <TextView
+                android:id="@+id/textViewNombreOriginalOutput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewNombreOriginal"
+                app:layout_constraintStart_toEndOf="@+id/textViewNombreOriginal"
+                app:layout_constraintTop_toTopOf="@+id/textViewNombreOriginal" />
+
+            <TextView
+                android:id="@+id/textViewGenero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Genero: "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewDemografia"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDemografia" />
+
+            <TextView
+                android:id="@+id/textViewAno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Año: "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewGenero"
+                app:layout_constraintTop_toBottomOf="@+id/textViewGenero" />
+
+            <TextView
+                android:id="@+id/textViewPG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="PG: "
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewAno"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAno" />
+
+            <TextView
+                android:id="@+id/textViewGeneroOutput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewGenero"
+                app:layout_constraintStart_toEndOf="@+id/textViewGenero"
+                app:layout_constraintTop_toTopOf="@+id/textViewGenero" />
+
+            <TextView
+                android:id="@+id/textViewAnoOutput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewAno"
+                app:layout_constraintStart_toEndOf="@+id/textViewAno"
+                app:layout_constraintTop_toTopOf="@+id/textViewAno" />
+
+            <TextView
+                android:id="@+id/textViewPGOutput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewPG"
+                app:layout_constraintStart_toEndOf="@+id/textViewPG"
+                app:layout_constraintTop_toTopOf="@+id/textViewPG" />
+
+            <TextView
+                android:id="@+id/textViewSinopsis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Sinopsis"
+                android:textColor="@color/orange"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textViewPG"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPG" />
+
+            <TextView
+                android:id="@+id/textViewSinopsisOutput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="none"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewSinopsis"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSinopsis" />
+
+            <TextView
+                android:id="@+id/testViewEpisodio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Episodios"
+                android:textColor="@color/orange"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textViewSinopsisOutput"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSinopsisOutput" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewVideos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/testViewEpisodio"
+                app:layout_constraintTop_toBottomOf="@+id/testViewEpisodio"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

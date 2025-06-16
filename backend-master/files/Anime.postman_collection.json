@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "f5fceef6-ad93-4272-811f-32aff357bbf0",
+		"name": "Anime",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "42864530",
+		"_collection_link": "https://winter-trinity-914980.postman.co/workspace/G6~1c17772f-f54d-4239-82d4-94f6f8b9e1d8/collection/42864383-f5fceef6-ad93-4272-811f-32aff357bbf0?action=share&source=collection_link&creator=42864530"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin@email.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{url}}/login"
+					},
+					"response": []
+				},
+				{
+					"name": "/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John Smith\",\r\n    \"email\": \"eememe@s.com\",\r\n    \"password\": \"1234\",\r\n    \"phone\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/register"
+					},
+					"response": []
+				},
+				{
+					"name": "/user/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/user/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/user/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"admin\",\r\n    \"email\": \"admin@email.com\",\r\n    \"password\": \"1234\",\r\n    \"phone\": \"664750904\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/user/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Anime",
+			"item": [
+				{
+					"name": "/users/{id}/animes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/users/8/animes"
+					},
+					"response": []
+				},
+				{
+					"name": "/users/{id}/anime/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/users/1/anime/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Favorites",
+			"item": [
+				{
+					"name": "/user/{id}/favoritos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/user/1/favoritos"
+					},
+					"response": []
+				},
+				{
+					"name": "/user/{id}/anime/{id}/favoritos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 23003,\r\n    \"animeId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/user/1/anime/1/favoritos"
+					},
+					"response": []
+				},
+				{
+					"name": "/user/{id}/anime/{id}/favoritos",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{url}}/user/1/anime/1/favoritos"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Videos",
+			"item": [
+				{
+					"name": "/anime/{id}/videos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/anime/27/videos"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "helloworld",
+			"item": [
+				{
+					"name": "/HelloWorld",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/HelloWorld"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

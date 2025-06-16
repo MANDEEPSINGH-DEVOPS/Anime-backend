@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_row_anime"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageNoFavorito"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/yearAnime"
+        app:layout_constraintEnd_toEndOf="@+id/descripcionAnime"
+        app:layout_constraintTop_toTopOf="@+id/yearAnime"
+        app:tint="@color/orange"
+        tools:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+
+    <ImageView
+        android:id="@+id/fotoAnime"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tituloAnime"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="Doraemon"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/fotoAnime"
+        app:layout_constraintTop_toTopOf="@+id/fotoAnime" />
+
+    <TextView
+        android:id="@+id/descripcionAnime"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="8dp"
+        android:text="Lore ipsum"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tituloAnime"
+        app:layout_constraintStart_toStartOf="@+id/tituloAnime"
+        app:layout_constraintTop_toBottomOf="@+id/tituloAnime" />
+
+    <TextView
+        android:id="@+id/yearAnime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="2025"
+        android:textColor="@color/orange"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fotoAnime"
+        app:layout_constraintStart_toStartOf="@+id/descripcionAnime"
+        app:layout_constraintTop_toBottomOf="@+id/descripcionAnime" />
+
+    <ImageView
+        android:id="@+id/imageFavorito"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/yearAnime"
+        app:layout_constraintEnd_toEndOf="@+id/descripcionAnime"
+        app:layout_constraintTop_toTopOf="@+id/yearAnime"
+        app:tint="@color/orange"
+        tools:srcCompat="@drawable/ic_baseline_favorite_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>
